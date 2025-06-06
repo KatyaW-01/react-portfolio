@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ProjectList from './components/ProjectList'
 import AddProject from './components/AddProject'
+import SearchProjects from './components/SearchProjects'
 
 import './App.css'
 const projects = [
@@ -41,6 +42,7 @@ function App() {
   return (
     <div>
       <h1>Portfolio</h1>
+      <SearchProjects />
       <ProjectList projects={projects} newProjects={newProjects}/>
       <h3>Add new Project:</h3>
       <AddProject formData={formData} setFormData={setFormData} handleAddProject={handleAddProject}/>
