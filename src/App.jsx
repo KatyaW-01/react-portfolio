@@ -26,15 +26,24 @@ const projects = [
     link: "https://github.com/KatyaW-01/wordly-dictionary-SPA"
   }
 ]
+
+
+
+
 function App() {
-  
+  const [formData, setFormData] = useState({name: "", description: "", tools: "", link: ""})
+  const [newProjects, setNewProjects] = useState([])
+
+  function handleAddProject(newProject) {
+    setNewProjects(prevProjects => [...prevProjects, newProject])
+  }
 
   return (
     <div>
       <h1>Portfolio</h1>
-      <ProjectList projects={projects}/>
+      <ProjectList projects={projects} newProjects={newProjects}/>
       <h3>Add new Project:</h3>
-      <AddProject />
+      <AddProject formData={formData} setFormData={setFormData} handleAddProject={handleAddProject}/>
     </div>
   )
 }

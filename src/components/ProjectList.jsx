@@ -1,8 +1,8 @@
 import React from "react"
 import ProjectCard from './ProjectCard'
 
-const ProjectList = ({projects}) => {
-  if(projects.length === 0) {
+const ProjectList = ({projects, newProjects}) => {
+  if(projects.length === 0 && newProjects.length === 0) {
     return <p>No projects. Please add a new project</p>
   }
   return (
@@ -10,6 +10,10 @@ const ProjectList = ({projects}) => {
       {projects.map((project)=>(
         <ProjectCard key={project.id} project={project}/>
       ))}
+      {newProjects.length > 0 && 
+        newProjects.map((newProject,index)=>(
+          <ProjectCard key={`new-${index}`} project={newProject}/>
+        ))}
     </div>
   );
 };
