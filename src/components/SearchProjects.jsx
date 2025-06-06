@@ -1,4 +1,5 @@
 import React from "react"
+import styles from '../styles/SearchProjects.module.css'
 
 const SearchProjects = ({inputValue, setInputValue, setSearchTerm}) => {
   function handleSubmit(event) {
@@ -7,9 +8,9 @@ const SearchProjects = ({inputValue, setInputValue, setSearchTerm}) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Search..." name="search" value={inputValue} onChange={(e) => setInputValue(e.target.value)}/>
-      <button type="submit"><i className="fas fa-search"></i></button>
+    <form className={styles.searchContainer} onSubmit={handleSubmit}>
+      <input className={styles.searchInput} type="text" placeholder="Search..." name="search" value={inputValue} onChange={(e) => setInputValue(e.target.value)}/>
+      <button className={styles.searchButton} type="submit"><i className="fas fa-search"></i></button>
     </form>
   )
 }

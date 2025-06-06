@@ -21,7 +21,7 @@ const projects = [
   },
   {
     id: 3,
-    name: "Vocab Vault Dictionary API Search",
+    name: "Vocab Vault Dictionary API",
     description: "A single page application allowing users to search for a word and receive the pronunciation, part of speach, definition, and examples of the specified word",
     tools: "Javascript, HTML, CSS",
     link: "https://github.com/KatyaW-01/wordly-dictionary-SPA"
@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div>
-      <h1>Portfolio</h1>
+      <h1>Katya Weicht Portfolio</h1>
       <SearchProjects inputValue={inputValue} setInputValue = {setInputValue} setSearchTerm={setSearchTerm}/>
 
       {
