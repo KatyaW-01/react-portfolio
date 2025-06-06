@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ProjectList from './components/ProjectList'
+import AddProject from './components/AddProject'
 
 import './App.css'
 const projects = [
@@ -32,6 +33,8 @@ function App() {
     <div>
       <h1>Portfolio</h1>
       <ProjectList projects={projects}/>
+      <h3>Add new Project:</h3>
+      <AddProject />
     </div>
   )
 }
