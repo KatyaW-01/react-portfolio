@@ -6,7 +6,7 @@ const ProjectCard = ({project}) => {
       <h1>{project.name}</h1>
       <h3>{project.description}</h3>
       <p>Tools: {project.tools}</p>
-      <p>Link: {project.link}</p>
+      <a href={project.link}>Explore on Github!</a>
     </div>
   )
 }

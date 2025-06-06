@@ -1,7 +1,7 @@
 import React from "react"
 import ProjectCard from './ProjectCard'
 
-const ProjectList = ({projects, newProjects}) => {
+const ProjectList = ({projects, newProjects = [] }) => {
   if(projects.length === 0 && newProjects.length === 0) {
     return <p>No projects. Please add a new project</p>
   }

@@ -21,14 +21,12 @@ const projects = [
   },
   {
     id: 3,
-    name: "Vocab Vault Dictionary Api Search",
+    name: "Vocab Vault Dictionary API Search",
     description: "A single page application allowing users to search for a word and receive the pronunciation, part of speach, definition, and examples of the specified word",
     tools: "Javascript, HTML, CSS",
     link: "https://github.com/KatyaW-01/wordly-dictionary-SPA"
   }
 ]
-
-
 
 
 function App() {
@@ -39,11 +37,28 @@ function App() {
     setNewProjects(prevProjects => [...prevProjects, newProject])
   }
 
+  const [inputValue, setInputValue] = useState('')
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const filteredProjects = projects.filter(project => {
+    return project.name.toLowerCase().includes(searchTerm.toLowerCase())
+  })
+
   return (
     <div>
       <h1>Portfolio</h1>
-      <SearchProjects />
-      <ProjectList projects={projects} newProjects={newProjects}/>
+      <SearchProjects inputValue={inputValue} setInputValue = {setInputValue} setSearchTerm={setSearchTerm}/>
+
+      {
+        searchTerm.trim() === '' ? (
+          <ProjectList projects={projects} newProjects={newProjects} />
+        ) : filteredProjects.length > 0 ? (
+          <ProjectList projects={filteredProjects} />
+        ) : (
+          <p>No projects match your search</p>
+        )
+      }
+      
       <h3>Add new Project:</h3>
       <AddProject formData={formData} setFormData={setFormData} handleAddProject={handleAddProject}/>
     </div>
