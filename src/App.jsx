@@ -59,7 +59,7 @@ function App() {
         )
       }
       
-      <h3>Add new Project:</h3>
+      <h3>Add New Project:</h3>
       <AddProject formData={formData} setFormData={setFormData} handleAddProject={handleAddProject}/>
     </div>
   )

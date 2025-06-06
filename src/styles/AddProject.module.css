@@ -1,0 +1,15 @@
+.projectInput {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  padding: 3px
+}
+
+.projectButton {
+  margin-left: 5px;
+  color: grey
+}
+
+.projectButton:hover {
+  background-color: 	#87ceeb;
+}

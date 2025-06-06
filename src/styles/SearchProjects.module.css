@@ -10,7 +10,11 @@
   width: 30px;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+}
+
+.searchButton:hover {
+  background-color: #87ceeb;
 }
 
 .searchButton i {
