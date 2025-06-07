@@ -1,13 +1,28 @@
-# React + Vite
+# React Personal Portfolio
+A single Page application made with React for displaying projects 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+* a search bar for searching filtering projects
+* a form for adding new projects
 
-Currently, two official plugins are available:
+## Component Tree
+--App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Components: <br>
+--ProjectList <br>
+&nbsp;&nbsp; -- ProjectCard <br>
+--AddProject <br>
+--SearchProjects <br>
 
-## Expanding the ESLint configuration
+### Prerequisites
+* react
+* vite
+* Node.js
+* npm
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# react-portfolio
+### Installation 
+* clone the repo
+* navigate into the project directory
+* install dependencies with npm install
+* run the server with npm run dev
+* open your browser and go to the displayed URL
